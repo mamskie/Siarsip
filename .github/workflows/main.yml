@@ -1,7 +1,8 @@
 
 # File: .github/workflows/workflow.yml
 
-on: workflow_dispatch:
+on: 
+  workflow_dispatch:
 
 name: AzureLoginSample
 
