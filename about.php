@@ -24,6 +24,7 @@ if (!isset($_SESSION['username'])) {
         <a href="index.php">Home</a>
         <a href="home.php">Arsip</a>
         <a class="active" href="about.php">About</a>
+        <a href="API.php">API</a>
         <a href="logout.php">Logout</a>
     </div>
 
@@ -35,7 +36,8 @@ if (!isset($_SESSION['username'])) {
                     <img src="m.png" height="150" width="150" alt="MAM">
                 </td>
                 <td valign="top">
-                    <h2>Aplikasi untuk Mengelola dokumen dengan membuat kode generator di setiap arsipnya sehingga dapat dengan mudah mencari dokumen yang sudah di simpan.</h2>
+                    <h2>Aplikasi untuk Mengelola dokumen dengan membuat kode generator di setiap arsipnya sehingga dapat
+                        dengan mudah mencari dokumen yang sudah di simpan.</h2>
                     <h4> Seluruh isi dalam website ini dilindungi oleh Undang-undang Republik Indonesia. </h4>
                     <h4>DP3AP2KB Provinsi Jawa Tengah</h4>
                 </td>

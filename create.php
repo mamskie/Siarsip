@@ -24,6 +24,7 @@ if (!isset($_SESSION['username'])) {
         <a href="index.php">Home</a>
         <a class="active" href="home.php">Arsip</a>
         <a href="about.php">About</a>
+        <a href="API.php">API</a>
         <a href="logout.php">Logout</a>
     </div>
 
@@ -65,7 +66,8 @@ if (!isset($_SESSION['username'])) {
                 </tr>
                 <tr>
                     <td>File (PDF)</td>
-                    <td><input class="button button2" type="file" name="file" id="file" accept="application/pdf"><br></td>
+                    <td><input class="button button2" type="file" name="file" id="file" accept="application/pdf"><br>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2">

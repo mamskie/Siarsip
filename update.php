@@ -24,6 +24,7 @@ if (!isset($_SESSION['username'])) {
         <a href="index.php">Home</a>
         <a class="active" href="home.php">Arsip</a>
         <a href="about.php">About</a>
+        <a href="API.php">API</a>
         <a href="logout.php">Logout</a>
     </div>
 
@@ -38,44 +39,46 @@ if (!isset($_SESSION['username'])) {
         $data = mysqli_query($koneksi, "select * from arsip where id='$id'");
         while ($d = mysqli_fetch_array($data)) {
         ?>
-            <form method="post" action="edit_method.php?id=<?php echo $id; ?>" enctype="multipart/form-data">
+        <form method="post" action="edit_method.php?id=<?php echo $id; ?>" enctype="multipart/form-data">
 
 
-                <table class="none" style="width:100%;">
-                    <tr>
-                        <td>Nomor Surat</td>
-                        <td><input class="inpt" type="text" name="nomor" value="<?php echo $d['nomor']; ?>"></td>
-                    </tr>
-                    <tr>
-                        <td>Kategori</td>
-                        <td>
-                            <select class="button button2" name="kategori">
-                                <option selected="selected"><?php echo $d['kategori']; ?></option>
-                                <option value="SPK">Surap Perintah Kerja (SPK)</option>
-                                <option value="SPJ">Surat Pertanggung Jawaban (SPJ) Keuangan</option>
-                                <option value="Nota Dinas">Nota Dinas</option>
-                                <option value="Pemberitahuan">Laporan Kegiatan</option>
-                                <option value="Kegiatan Program">Kegiatan Program</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nama</td>
-                        <td><input class="inpt" type="text" name="judul" value="<?php echo $d['judul']; ?>"></td>
-                    </tr>
-                    <tr>
-                        <td>File Surat (PDF)</td>
-                        <td><input class="button button2" type="file" name="file" value="<?php echo $d['pdf']; ?>" accept="application/pdf"><br></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <a style="text-decoration: none; color:black;" href="show.php?id=<?php echo $id; ?>"><button class="button button6">Kembali</button></a>
-                            <input class="button button1" type="submit" value="Simpan">
-                        </td>
-                    </tr>
-                </table>
+            <table class="none" style="width:100%;">
+                <tr>
+                    <td>Nomor Surat</td>
+                    <td><input class="inpt" type="text" name="nomor" value="<?php echo $d['nomor']; ?>"></td>
+                </tr>
+                <tr>
+                    <td>Kategori</td>
+                    <td>
+                        <select class="button button2" name="kategori">
+                            <option selected="selected"><?php echo $d['kategori']; ?></option>
+                            <option value="SPK">Surap Perintah Kerja (SPK)</option>
+                            <option value="SPJ">Surat Pertanggung Jawaban (SPJ) Keuangan</option>
+                            <option value="Nota Dinas">Nota Dinas</option>
+                            <option value="Pemberitahuan">Laporan Kegiatan</option>
+                            <option value="Kegiatan Program">Kegiatan Program</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td><input class="inpt" type="text" name="judul" value="<?php echo $d['judul']; ?>"></td>
+                </tr>
+                <tr>
+                    <td>File Surat (PDF)</td>
+                    <td><input class="button button2" type="file" name="file" value="<?php echo $d['pdf']; ?>"
+                            accept="application/pdf"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a style="text-decoration: none; color:black;" href="show.php?id=<?php echo $id; ?>"><button
+                                class="button button6">Kembali</button></a>
+                        <input class="button button1" type="submit" value="Simpan">
+                    </td>
+                </tr>
+            </table>
 
-            </form>
+        </form>
         <?php
         }
         ?>
