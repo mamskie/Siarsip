@@ -1,0 +1,3 @@
+              - name: DeployBot - Trigger a Deployment
+                    uses: 
+                     facundofarias/deploybot-action@0.2
