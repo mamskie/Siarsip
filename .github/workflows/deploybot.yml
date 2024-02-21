@@ -1,4 +1,4 @@
-name: Run PHP Script
+name: DeployBot - Trigger a Deployment
 
 on:
   push:
@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
 
-    - name: Run PHP script
-      run: php index.php
+      - name: Run PHP script
+        run: php index.php
