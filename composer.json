@@ -1,0 +1,13 @@
+{
+    "name": "arsip-inaktif",
+    "description": "web pengarsipan",
+    "authors": [
+        {
+            "name": "mamskie",
+            "email": "khotib.bul@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    }
+}
